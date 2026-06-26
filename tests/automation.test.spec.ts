@@ -17,11 +17,11 @@ test('TC-001 - successful registration with required fields', async ({ page }) =
 
   await page.getByRole('button', { name: 'Submit' }).click();
 
-  await expect(page).toHaveURL(/firstName=Gogi/);
-  await expect(page).toHaveURL(/lastName=Blag/);
-  await expect(page).toHaveURL(/email=gogi.blag%40example.com/);
-  await expect(page).toHaveURL(/password=Test%401234/);
-  await expect(page).toHaveURL(/confirmPassword=Test%401234/);
+   // Check form is cleared after submit
+  await expect(page.getByLabel('First name')).toHaveValue('');
+  await expect(page.getByLabel('Last name')).toHaveValue('');
+  await expect(page.getByLabel('Email')).toHaveValue('');
+  await expect(page.getByLabel('LinkedIn URL')).toHaveValue('');
 });
 
 // TC-002 - shows validation when form is empty

@@ -291,7 +291,7 @@ The form shows a format validation error — this is a bug.
 
 ---
 
-## TC-012 - LinkedIn should accept only LinkedIn profile URLs
+## TC-010 - LinkedIn accepts invalid URL (bug)
 
 **Priority:** Medium
 **Type:** Negative
@@ -326,7 +326,7 @@ Form submits successfully. No validation error appears.
 
 ---
 
-## TC-013 - GitHub should accept only GitHub profile URLs
+## TC-011 - GitHub should accept only GitHub profile URLs
 
 **Priority:** Medium
 **Type:** Negative
